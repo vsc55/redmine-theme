@@ -372,6 +372,8 @@ a.issue.closed:visited {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
   word-wrap: break-word;
   z-index: 50;
+  overflow: visible;
+  white-space: pre-wrap;
 }
 #header h1 a {
   font-size: 14px;
@@ -405,18 +407,16 @@ a.issue.closed:visited {
   left: 0;
 }
 #main-menu ul {
-/*  margin-left: -15px;*/
-margin-left: -5px;
+  margin-left: -15px;
+  width: auto;
 }
 #main-menu ul li {
-  /*float: none;*/
-float: left;
-display: table-row;
-width: 100%;
+  float: none;
   list-style-type: none;
   margin: 0;
   padding-bottom: 2px;
   text-align: left;
+  display: block;
 }
 #main-menu ul li a {
   -webkit-user-select: none;
@@ -455,26 +455,16 @@ width: 100%;
   font-weight: bold;
   text-shadow: none;
 }
-
-
-
 #main-menu div.tabs-buttons {
-display: none;
-visibility: hidden;
-/*position: relative;
-float: left;
-display: table-row;
-width: 100%;
-text-align: center;
-vertical-align: medium;
-*/
+	display: none;
+	visibility: hidden;
 }
 
-#main-menu div.tabs-buttons button.tab-left, #main-menu div.tabs-buttons button.tab-right {
-
+#main-menu .menu-children 
+{
+	margin-left: 10px;
+	width: auto;
 }
-
-
 
 #footer {
   border-top: 1px solid #CCCCCC;
@@ -1250,9 +1240,11 @@ input#user_search {
 .icon-file {
   background-image: url(../images/icons/report-paper.png);
 }
+/* Commented out for WikiNG compatibility 
 .jstElements .help a {
   background-image: url(../images/icons/question.png) !important;
 }
+*/
 .jstElements button.jstb_strong {
   background-image: url(../images/icons/edit-bold.png);
 }
@@ -1491,6 +1483,11 @@ dt.time-entry {
 #main-menu ul li a.settings:before {
   content: "\f0ad";
 }
+#main-menu .tabs-buttons {
+  /*display: none;*/
+  right: 0px;
+  bottom: -24px;
+}
 /*---------- Colors ----------*/
 /* Links */
 a,
@@ -1526,9 +1523,14 @@ a:visited,
 }
 #header h1 {
   color: #e0f2f9;
+  overflow: show;
+  whitespace: wrap;
 }
 #header h1 a {
   color: #1d4e6d;
+}
+#header h1 .breadcrumbs {
+  display: block;
 }
 #sidebar h3 {
   color: #295e82;
