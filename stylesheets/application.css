@@ -1087,6 +1087,15 @@ tr.message.sticky td.subject {
   -moz-border-radius: 6px;
   border-radius: 6px;
   min-height: 617px;
+  margin: 0 auto;
+  border: 0px;
+  
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  width: 50%;
+  background-color: transparent;
 }
 #login-form table {
   background: none;
