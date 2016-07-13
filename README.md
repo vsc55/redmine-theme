@@ -5,7 +5,8 @@ Pixel Cookers Redmine Theme
 
 * Screenshots: [Here](http://pixel-cookers.github.com/redmine-theme/)
 * Author: [Ludovic Meyer](http://www.ludovicmeyer.com)
-* Compatible with: Redmine 0.8.x, 1.x, 2.x & Redmine Trunk (see changelog and tags for compatibility)
+* Fix Redmine 3.3 [Javier Pastor]
+* Compatible with: Redmine 0.8.x, 1.x, 2.x & 3.3
 
 ### Install instructions :
 
