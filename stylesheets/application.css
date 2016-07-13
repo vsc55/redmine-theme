@@ -271,7 +271,7 @@ a.issue.closed:visited {
   padding: 0;
   position: fixed;
   width: 100%;
-  z-index: 20;
+  z-index: 49;
 }
 #top-menu a {
   font-weight: normal;
