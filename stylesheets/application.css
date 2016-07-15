@@ -418,13 +418,10 @@ a.issue.closed:visited {
   text-align: left;
   display: block;
 }
-
-#main-menu ul li:nth-child(1) {
+#main-menu > ul > li:first-child {
   width: 50px;
   text-align: center;
-  
 }
-
 #main-menu ul li a {
   -webkit-user-select: none;
   -moz-user-select: none;
