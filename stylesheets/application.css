@@ -418,6 +418,13 @@ a.issue.closed:visited {
   text-align: left;
   display: block;
 }
+
+#main-menu ul li:nth-child(1) {
+  width: 50px;
+  text-align: center;
+  
+}
+
 #main-menu ul li a {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1643,4 +1650,43 @@ body.stealth_on #header {
 }
 body.stealth_on #header {
   background: #555;
+}
+
+
+
+
+
+
+
+/* PlugIn redmine_issue_badge */
+#issue_badge {
+	/*height: 30px;*/
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 10px;
+	z-index: 60;
+}
+
+#issue_badge .badge {
+    min-width: 20px;
+    padding: 3px 6px 4px 6px;
+    font-size: 15px;
+	color: #fff;
+	background-color: red;
+	border-radius: 8px;
+}
+
+#issue_badge div.issue_badge_content {
+	text-align: left;
+}
+
+#issue_badge div.issue_badge_content .metadata
+{
+  text-align: left;
+}
+
+#issue_badge div.issue_badge_content a {
+	text-align: left;
+	margin: 0 auto;
+	padding: 0px;
 }
