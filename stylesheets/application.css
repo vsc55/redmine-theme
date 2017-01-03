@@ -365,12 +365,12 @@ a.issue.closed:visited {
 }
 #header h1 {
   font-family: "Trebuchet MS", Verdana, sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   margin: 15px 0;
   text-align: left;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
-  word-wrap: break-word;
+  /*word-wrap: break-word;*/
   z-index: 50;
   overflow: visible;
   white-space: pre-wrap;
@@ -378,6 +378,10 @@ a.issue.closed:visited {
 #header h1 a {
   font-size: 14px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+#header h1 a:hover {
+	color: #ffffb6;
+	font-size: 16px;
 }
 #main {
   background: none;
@@ -418,9 +422,9 @@ a.issue.closed:visited {
   text-align: left;
   display: block;
 }
-#main-menu > ul > li:first-child {
-  width: 50px;
-  text-align: center;
+#main-menu .tabs-buttons .tab-left,
+#main-menu .tabs-buttons .tab-right {
+  display: none;
 }
 #main-menu ul li a {
   -webkit-user-select: none;
@@ -459,17 +463,10 @@ a.issue.closed:visited {
   font-weight: bold;
   text-shadow: none;
 }
-#main-menu div.tabs-buttons {
-	display: none;
-	visibility: hidden;
-}
-
-#main-menu .menu-children 
-{
+#main-menu .menu-children {
 	margin-left: 10px;
-	width: auto;
+	width: 100%;
 }
-
 #footer {
   border-top: 1px solid #CCCCCC;
   clear: left;
@@ -1503,7 +1500,6 @@ dt.time-entry {
   content: "\f0ad";
 }
 #main-menu .tabs-buttons {
-  /*display: none;*/
   right: 0px;
   bottom: -24px;
 }
@@ -1542,12 +1538,14 @@ a:visited,
 }
 #header h1 {
   color: #e0f2f9;
-  overflow: show;
-  whitespace: wrap;
+  /*overflow: show;
+  whitespace: wrap;*/
 }
 #header h1 a {
-  color: #1d4e6d;
+  /*color: #1d4e6d;*/
+  color: #FFFFFF;
 }
+
 #header h1 .breadcrumbs {
   display: block;
 }
