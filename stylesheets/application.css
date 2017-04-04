@@ -1685,3 +1685,7 @@ body.stealth_on #header {
 	margin: 0 auto;
 	padding: 0px;
 }
+
+table.issues-board tbody td, table.issues-board tbody tr.issue:hover td {
+	vertical-align: top
+}
