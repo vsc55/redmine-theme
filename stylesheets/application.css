@@ -271,7 +271,7 @@ a.issue.closed:visited {
   padding: 0;
   position: fixed;
   width: 100%;
-  z-index: 49;
+  z-index: 20;
 }
 #top-menu a {
   font-weight: normal;
@@ -365,23 +365,17 @@ a.issue.closed:visited {
 }
 #header h1 {
   font-family: "Trebuchet MS", Verdana, sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   margin: 15px 0;
   text-align: left;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
-  /*word-wrap: break-word;*/
+  word-wrap: break-word;
   z-index: 50;
-  overflow: visible;
-  white-space: pre-wrap;
 }
 #header h1 a {
   font-size: 14px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-}
-#header h1 a:hover {
-	color: #ffffb6;
-	font-size: 16px;
 }
 #main {
   background: none;
@@ -421,10 +415,7 @@ a.issue.closed:visited {
   padding-bottom: 2px;
   text-align: left;
   display: block;
-}
-#main-menu .tabs-buttons .tab-left,
-#main-menu .tabs-buttons .tab-right {
-  display: none;
+  width: 100%;
 }
 #main-menu ul li a {
   -webkit-user-select: none;
@@ -462,6 +453,9 @@ a.issue.closed:visited {
   color: #333333;
   font-weight: bold;
   text-shadow: none;
+}
+#main-menu .tabs-buttons {
+	display: none !important;
 }
 #main-menu .menu-children {
 	margin-left: 10px;
@@ -554,7 +548,6 @@ h4,
   border-top: 1px solid #e3ecfc;
   color: #000000;
   font-size: 16px;
-  margin: -6px -10px 10px;
   padding: 10px 20px;
 }
 h3,
@@ -1000,13 +993,7 @@ div.wiki dl {
 }
 h2 img.gravatar {
   vertical-align: top;
-  width: 50px;
-  height: 50px;
-  
-  margin-top: -10px;
-  margin-right: 8px;
-  margin-bottom: -4px;
-  margin-left: 0px;
+  width: 21px;
 }
 .contextual input[type='text'] {
   margin: 0;
@@ -1094,15 +1081,6 @@ tr.message.sticky td.subject {
   -moz-border-radius: 6px;
   border-radius: 6px;
   min-height: 617px;
-  margin: 0 auto;
-  border: 0px;
-  
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  width: 50%;
-  background-color: transparent;
 }
 #login-form table {
   background: none;
@@ -1256,11 +1234,9 @@ input#user_search {
 .icon-file {
   background-image: url(../images/icons/report-paper.png);
 }
-/* Commented out for WikiNG compatibility 
 .jstElements .help a {
   background-image: url(../images/icons/question.png) !important;
 }
-*/
 .jstElements button.jstb_strong {
   background-image: url(../images/icons/edit-bold.png);
 }
@@ -1499,10 +1475,6 @@ dt.time-entry {
 #main-menu ul li a.settings:before {
   content: "\f0ad";
 }
-#main-menu .tabs-buttons {
-  right: 0px;
-  bottom: -24px;
-}
 /*---------- Colors ----------*/
 /* Links */
 a,
@@ -1542,12 +1514,7 @@ a:visited,
   whitespace: wrap;*/
 }
 #header h1 a {
-  /*color: #1d4e6d;*/
-  color: #FFFFFF;
-}
-
-#header h1 .breadcrumbs {
-  display: block;
+  color: #1d4e6d;
 }
 #sidebar h3 {
   color: #295e82;
@@ -1645,47 +1612,4 @@ body.stealth_on #header {
 }
 body.stealth_on #header {
   background: #555;
-}
-
-
-
-
-
-
-
-/* PlugIn redmine_issue_badge */
-#issue_badge {
-	/*height: 30px;*/
-	vertical-align: middle;
-	text-align: center;
-	padding-top: 10px;
-	z-index: 60;
-}
-
-#issue_badge .badge {
-    min-width: 20px;
-    padding: 3px 6px 4px 6px;
-    font-size: 15px;
-	color: #fff;
-	background-color: red;
-	border-radius: 8px;
-}
-
-#issue_badge div.issue_badge_content {
-	text-align: left;
-}
-
-#issue_badge div.issue_badge_content .metadata
-{
-  text-align: left;
-}
-
-#issue_badge div.issue_badge_content a {
-	text-align: left;
-	margin: 0 auto;
-	padding: 0px;
-}
-
-table.issues-board tbody td, table.issues-board tbody tr.issue:hover td {
-	vertical-align: top
 }

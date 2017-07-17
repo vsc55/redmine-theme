@@ -192,6 +192,7 @@ a {
 
   ul {
     margin-left: -15px;
+	width: auto;
 
     li {
       float: none;
@@ -199,6 +200,8 @@ a {
       margin: 0;
       padding-bottom: 2px;
       text-align: left;
+	  display: block;
+      width: 100%;
 
       a {
         .user-select(none);
@@ -230,6 +233,15 @@ a {
         }
       }
     }
+  }
+  
+  .tabs-buttons {
+    display: none !important;
+  }
+
+  .menu-children {
+    margin-left: 10px;
+    width: 100%;
   }
 }
 
@@ -304,7 +316,6 @@ h2, h3, h4, .wiki h1, .wiki h2, .wiki h3 {
   border-top: 1px solid #e3ecfc;
   color: #000000;
   font-size: 16px;
-  margin: -6px -10px 10px;
   padding: 10px 20px;
 }
 h3, .wiki h1 {
