@@ -335,11 +335,24 @@ a.issue.closed:visited {
 }
 #header #quick-search {
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 30px;
+  line-height: 35px;
   margin: 15px 15px 20px 0;
   padding: 0;
   text-align: right;
 }
+
+#project-jump .drdn-trigger
+{
+	line-height: 30px;
+	height: 35px;
+}
+
+#project-jump .drdn-content
+{
+  width: 198px;
+  margin-top: 10px;
+}
+
 #header a {
   color: #CCCCCC;
 }
@@ -1082,6 +1095,7 @@ tr.message.sticky td.subject {
   -moz-border-radius: 6px;
   border-radius: 6px;
   min-height: 617px;
+  min-width: 90%;
 }
 #login-form table {
   background: none;
@@ -1525,7 +1539,7 @@ a:visited,
   background: #222222;
 }
 #login-form label {
-  color: #cccccc;
+  /*color: #cccccc;*/
 }
 /* Buttons */
 input[type="submit"],
