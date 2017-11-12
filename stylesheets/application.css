@@ -1065,6 +1065,11 @@ div.flash.error,
 #activity .closed {
   text-decoration: line-through;
 }
+#activity dt, .journal
+{
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
 body.controller-timelog div#content form#query_form fieldset#date-range {
   margin-top: 25px;
 }
