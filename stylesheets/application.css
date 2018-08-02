@@ -1712,3 +1712,12 @@ body.stealth_on #header {
 .attachments_fields input.filename {
   padding-left: 20px;
 }
+
+
+/* fix plugin: redmine_favourite_projects */
+div#top-menu a.icon-projects {
+	/*display:block;*/
+	margin: 0px;
+	padding: 0px 10px 0px 20px;
+	background-repeat: no-repeat;
+}
