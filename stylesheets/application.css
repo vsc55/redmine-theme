@@ -335,7 +335,7 @@ a.issue.closed:visited {
 }
 #header #quick-search {
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 35px;
+  line-height: 30px;
   margin: 15px 15px 20px 0;
   padding: 0;
   text-align: right;
@@ -343,14 +343,42 @@ a.issue.closed:visited {
 
 #project-jump .drdn-trigger
 {
-	line-height: 30px;
-	height: 35px;
+	line-height: normal;
+	height: 23px;
+	font-size: 13px;
+	text-align: left;
 }
 
 #project-jump .drdn-content
 {
-  width: 198px;
+  /*width: 198px;*/
+  width: 203px;
   margin-top: 10px;
+  top: 15px
+}
+
+/*Included to fix Projects Page Columns.  See https://www.redmine.org/issues/26853 */
+#projects-index {
+	column-width: auto;
+	-webkit-column-width: auto;
+	-moz-column-width: auto;
+}
+
+.drdn-items
+{
+  /*padding: 4px 4px;*/
+  line-height: 15px;
+  text-align: left;
+  font-size: 13px;
+  padding: inherit;
+}
+
+.drdn-items>* {
+  padding:2px 8px;
+}
+
+.drdn-content .autocomplete {
+	height:24px;
 }
 
 #header a {
@@ -380,11 +408,12 @@ a.issue.closed:visited {
   font-family: "Trebuchet MS", Verdana, sans-serif;
   font-size: 24px;
   font-weight: bold;
-  margin: 15px 0;
+  /*margin: 15px 0;*/
   text-align: left;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
-  word-wrap: break-word;
   z-index: 50;
+  overflow: visible;
+  white-space: pre-wrap;
 }
 #header h1 a {
   font-size: 14px;
@@ -428,7 +457,6 @@ a.issue.closed:visited {
   padding-bottom: 2px;
   text-align: left;
   display: block;
-  width: 100%;
 }
 #main-menu ul li a {
   -webkit-user-select: none;
@@ -471,7 +499,7 @@ a.issue.closed:visited {
 	display: none !important;
 }
 #main-menu .menu-children {
-	margin-left: 10px;
+	margin-left: 20px;
 	width: 100%;
 }
 #footer {
@@ -561,8 +589,8 @@ h4,
   border-top: 1px solid #e3ecfc;
   color: #000000;
   font-size: 16px;
+  margin: -6px -10px 10px;
   padding: 10px 20px;
-  margin: 0px 0px 0px 0px;
 }
 h3,
 .wiki h1 {
@@ -866,6 +894,11 @@ textarea.wiki-edit {
 .tabs ul li {
   padding: 0;
 }
+
+.tabs-buttons {
+  display: none !important;
+}
+
 #context-menu li {
   background: none;
 }
@@ -985,6 +1018,8 @@ div.wiki dl {
   position: relative;
   z-index: 2;
   padding: 0;
+  /* Add for Anonymous Project (tabs) */
+  line-height: 35px;
 }
 #content > .contextual > * {
   margin-left: 5px;
@@ -1099,9 +1134,13 @@ tr.message.sticky td.subject {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  min-height: 617px;
-  background-color: transparent;
-  border: 0px;  
+/*  min-height: 617px; */
+/*  min-width: 90%; */
+  margin: 15em auto 2em auto;
+  
+  /* remove border and background form login */
+  /* background-color: transparent; */
+  /* border: 0px; */
 }
 #login-form table {
   background: none;
@@ -1255,9 +1294,11 @@ input#user_search {
 .icon-file {
   background-image: url(../images/icons/report-paper.png);
 }
+/* Commented out for WikiNG compatibility
 .jstElements .help a {
   background-image: url(../images/icons/question.png) !important;
 }
+*/
 .jstElements button.jstb_strong {
   background-image: url(../images/icons/edit-bold.png);
 }
@@ -1310,22 +1351,27 @@ div.projects h3 {
 }
 div.projects h3 > h3 {
   background: url(../images/22x22/projects.png) no-repeat scroll 0 50% transparent;
+  background-repeat: no-repeat;
   padding-left: 26px;
 }
 div.news h3 {
   background-image: url(../images/22x22/notifications.png);
+  background-repeat: no-repeat;
   padding-left: 26px;
 }
 div.issues h3 {
   background-image: url(../images/22x22/tracker.png);
+  background-repeat: no-repeat;
   padding-left: 26px;
 }
 div.members h3 {
   background-image: url(../images/22x22/users.png);
+  background-repeat: no-repeat;
   padding-left: 26px;
 }
 h3.version {
   background-image: url(../images/22x22/package.png);
+  background-repeat: no-repeat;
   padding-left: 26px;
 }
 #admin-menu li {
@@ -1336,6 +1382,7 @@ h3.version {
   padding-bottom: 3px !important;
   padding-left: 26px !important;
   padding-top: 3px !important;
+  background-repeat: no-repeat;
 }
 #admin-menu a.projects {
   background-image: url(../images/22x22/projects.png);
@@ -1381,6 +1428,10 @@ table.boards a.board,
 h3.comments {
   background-image: url(../images/22x22/comment.png);
   padding-left: 26px;
+}
+#activity dt, .journal {
+  background-repeat: no-repeat;
+  padding-left: 20px;
 }
 dt.issue {
   background-image: url(../images/icons/ticket.png);
@@ -1496,6 +1547,10 @@ dt.time-entry {
 #main-menu ul li a.settings:before {
   content: "\f0ad";
 }
+#main-menu .tabs-buttons {
+  right: 0px;
+  bottom: -24px;
+}
 /*---------- Colors ----------*/
 /* Links */
 a,
@@ -1530,12 +1585,21 @@ a:visited,
   color: #ffffff;
 }
 #header h1 {
+  display: block;
   color: #e0f2f9;
-  /*overflow: show;
-  whitespace: wrap;*/
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 5px;
+  
+  /* if texto not enter in one line the split in multi lines */
+  overflow-wrap: break-word;
 }
 #header h1 a {
   color: #1d4e6d;
+}
+#header h1 .breadcrumbs {
+  display: block;
+  font-weight: inherit;
 }
 #sidebar h3 {
   color: #295e82;
@@ -1545,7 +1609,7 @@ a:visited,
   background: #222222;
 }
 #login-form label {
-  color: #cccccc;
+/*  color: #cccccc; */ 
 }
 /* Buttons */
 input[type="submit"],
@@ -1633,4 +1697,18 @@ body.stealth_on #header {
 }
 body.stealth_on #header {
   background: #555;
+}
+
+#quick-search #q {
+	/*height: inherit;*/
+	height: 21px;
+	width: 120px;
+}
+
+#project-jump.drdn {width:100%;}
+.drdn-content .quick-search {margin:1px 3px 3px 3px;}
+
+/* Fixes icon label spacing on Issue Attachments */
+.attachments_fields input.filename {
+  padding-left: 20px;
 }
