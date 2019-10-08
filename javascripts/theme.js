@@ -163,10 +163,9 @@
     for (var i = 0; i < str.length; i++) {
       var ch = str.substring(i, i+1);
       if ((ch < "0" || "9" < ch) && ch != '.') {
-        alert("Only numeric input is allowed!\n\n"
-            + parseFloat(ok) + " will be used because '"
-            + str + "' is invalid.\nYou may correct "
-            + "this entry and try again.");
+        alert("Template '<hours>h <minutes>m' or numeric input is allowed!\n\n"
+          + "'" + str + "' is invalid.\nYou may correct "
+          + "this entry and try again.");
         return parseFloat(ok);
       }
       else ok += ch;
@@ -175,6 +174,26 @@
   }
 
   function makeTime(value) {
+    var str = $.trim(value);
+    if (str.length > 0 && str.match(/^(\d{1,2}h{1}(\s*[0-5]?\d{1})?)?(\s*[0-5]?\d{1}m{1})?$/i)) {
+      var arr = str.split(' ');
+      arr = arr.filter(function(e){return e});
+      var res = "";
+      if (arr[0].charAt(arr[0].length - 1) == 'h') {
+        res = leftPad(arr[0].substr(0, arr[0].length - 1), 2);
+        arr.splice(0, 1);
+      } else {
+        res = "00"
+			}
+      if (arr.length > 0 && arr[0].charAt(arr[0].length - 1) == 'm') {
+        res = res + ":" + leftPad(arr[0].substr(0, arr[0].length - 1), 2);
+        arr.splice(0, 1);
+      } else {
+        res = res + ":00"
+      }
+      res = res + ":00"
+      return res;
+    }
     var num = (checkDecimal(value)); // validates input
     if (num) {
       var hour = parseInt(num);
