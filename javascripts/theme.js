@@ -18,10 +18,16 @@
 
     sidebar_btn.on('click', toggle_sidebar);
 
-    if (elem != undefined){
-      elem.before(sidebar_btn);
-      if ($.cookie('hide_sidebar') == 'yes'){
-        $('#main').toggleClass('nosidebar');
+    if (elem.length){
+      // show sidebar if it has something.
+      if ($("#sidebar").children().length) {
+        elem.before(sidebar_btn);
+        if ($.cookie('hide_sidebar') == 'yes'){
+          $('#main').toggleClass('nosidebar');
+        }   
+      } else {
+        // if #sidebar is empty, hide it completely.
+        $("#main").toggleClass("nosidebar");
       }
     }
 
